@@ -1,0 +1,6 @@
+# Dependancies
+node_modules
+
+# IDE / Docker Booting in VS Code
+.vscode
+.idea
