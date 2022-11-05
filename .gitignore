@@ -1,6 +1,9 @@
 # Dependancies
 node_modules
 
+# Secrets
+secrets.txt
+
 # IDE / Docker Booting in VS Code
 .vscode
 .idea
