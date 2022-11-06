@@ -19,7 +19,7 @@ module.exports = {
                 .addChannelTypes(ChannelType.GuildCategory)
         )
         .addChannelOption(option => 
-            option.setName("trancripts")
+            option.setName("transcripts")
                 .setDescription("Where do you want the transcripts to be stored.")
                 .setRequired(true)
                 .addChannelTypes(ChannelType.GuildText)
