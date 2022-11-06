@@ -4,6 +4,9 @@ node_modules
 # Secrets
 secrets.txt
 
+# Node.js things
+package-lock.json
+
 # IDE / Docker Booting in VS Code
 .vscode
 .idea
