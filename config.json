@@ -1,8 +1,4 @@
 {
     "token": "discord bot token",
-    "mongodb": "mongodb login",
-    "everyone": "everyone id",
-    "ticketParent": "category for tickets",
-    "openticket": "channel to send ticket panel",
-    "transcripts": "channel id for where you want the ticket transcripts to be"
+    "mongodb": "mongodb login"
 }

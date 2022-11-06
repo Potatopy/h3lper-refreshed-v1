@@ -7,12 +7,12 @@ module.exports = {
     async execute(member) {
         Schema.findOne({Guild: member.guild.id}, async (err, data) => {
             if (!data) return;
-            let channel = data.Channel;
+            let channel = data.channel;
             let Msg = data.Msg || " ";
             let Role = data.Role
 
         const {user, guild} = member;
-        const welcomeChannel = member.guild.channels.cache.get(data.Channel);
+        const welcomeChannel = member.guild.channels.cache.get(data.channel);
 
         const welcomeEmbed = new EmbedBuilder()
         .setTitle('**New Member**')
@@ -21,7 +21,7 @@ module.exports = {
         .addFields({name: 'Total members', value: `${guild.memberCount}`})
         .setTimestamp();
 
-        welcomeChannel.send({embeds: [welcomeEmbed]});
+        welcomeChannel.send({content: `Welcome <@${member.id}>`, embeds: [welcomeEmbed]});
         member.roles.add(data.Role)
         })
     }

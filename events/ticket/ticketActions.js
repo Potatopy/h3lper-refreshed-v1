@@ -1,6 +1,6 @@
 const { ButtonInteraction, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 const { createTranscript } = require('discord-html-transcripts');
-const { transcripts } = require('../../config.json');
+const TicketSetup = require('../../models/ticketsetup');
 const ticketSchema = require('../../models/ticket');
 
 module.exports = {
@@ -12,9 +12,13 @@ module.exports = {
 
         if (!interaction.isButton()) return; // if no button is present return
 
-        if (!["close", "lock", "unlock"].includes(customId)) return; // If the button has none of these custom id's return
+        if (!["close", "lock", "unlock", "claim"].includes(customId)) return; // If the button has none of these custom id's return
 
-        if (!guild.members.me.permissions.has(ManageChannels))
+        const docs = await TicketSetup.findOne({ GuildID: guild.id })
+
+        if (!docs) return;
+
+        if (!guild.members.me.permissions.has((r) => r.id === docs.Handlers))
             return interaction.reply({content: "I don't have the required permissions to do this. Give me the 'Manage Channel' Permission and try again!", ephemeral: true})
 
         const embed = new EmbedBuilder().setColor("Aqua");
@@ -23,7 +27,7 @@ module.exports = {
             if (err) throw err;
             if(!data) return // If data is not found return (it wil, probably make its own db)
 
-            const fetchedMember = await guild.members.cache.get(data.MemberID);
+            const fetchedMember = await guild.members.cache.get(data.MembersID);
 
             switch (customId) {
                 case "close":
@@ -50,7 +54,7 @@ module.exports = {
                             .setFooter({ text: member.user.tag, iconURL: member.displayAvatarURL({ dynamic: true }) })
                             .setTimestamp();
 
-                        const res = await guild.channels.cache.get(transcripts).send({
+                        const res = await guild.channels.cache.get(docs.Transcripts).send({
                             embeds: [transcriptEmbed],
                             files: [transcript]
                         });
@@ -76,11 +80,11 @@ module.exports = {
                         await ticketSchema.updateOne({ChannelID: channel.id}, {Locked: true});
                         embed.setDescription("Ticket successfully locked! 🔐")
 
-                        channel.permissionOverwrites.edit(fetchedMember, {SendMessages: false})
+                        data.MembersId.forEach((m) => {
+                            channel.permissionOverwrites.edit(m, {SendMessages: false})
+                        })
 
                         return interaction.reply({ embeds: [embed] })
-
-                        break;
 
                     case "unlock":
                         if (!member.permissions.has(ManageChannels))
@@ -92,9 +96,25 @@ module.exports = {
                         await ticketSchema.updateOne({ChannelID: channel.id}, {Locked: false});
                         embed.setDescription("Ticket successfully unlocked! 🔓")
 
-                        channel.permissionOverwrites.edit(fetchedMember, {SendMessages: true})
+                        data.MembersId.forEach((m) => {
+                            channel.permissionOverwrites.edit(m, {SendMessages: true})
+                        })
 
                         return interaction.reply({ embeds: [embed] })
+                    case "claim":
+                        if(!member.permissions.has(ManageChannels))
+                            return interaction.reply({ content: "You don't have perms for this action!", ephemeral: true })
+
+                        if (data.Claimed == true)
+                            return interaction.reply({ content: `Ticket has been claimed by <@${data.ClaimedBy}>`, ephemeral: true })
+
+                        await ticketSchema.updateOne({ ChannelID: channel.id }, { Claimed: true, ClaimedBy: member.id });
+
+                        embed.setDescription(`Ticket has been claimed by <@${member}>`);
+
+                        interaction.reply({ embeds: [embed] })
+
+                        break;
                 default:
                     break;
             }

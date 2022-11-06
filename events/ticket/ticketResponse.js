@@ -1,6 +1,6 @@
 const { ChannelType, ButtonInteraction, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits } = require('discord.js')
 const ticketSchema = require('../../models/ticket')
-const { ticketParent, everyone } = require('../../config.json');
+const TicketSetup = require('../../models/ticketsetup')
 
 module.exports = {
     name: "interactionCreate",
@@ -12,7 +12,13 @@ module.exports = {
 
         if (!interaction.isButton()) return; // If there is no button then return
 
-        if(!["member", "partnerships", "bot", "other"].includes(customId)) return; // If the button ID does not exists then return
+        const data = await TicketSetup.findOne({ GuildID: guild.id });
+
+        if (!data)
+            return;
+
+        if (!data.Buttons.includes(customId))
+            return;
 
         if (!guild.members.me.permissions.has(ManageChannels))
             interaction.reply({content: "I don't have permissions for this action. Give me the 'Manage Channels' permission to continue", ephemeral: true})
@@ -21,10 +27,10 @@ module.exports = {
             await guild.channels.create({
                 name: `${member.user.username}-ticket${ticketId}`,
                 type: ChannelType.GuildText,
-                parent: ticketParent,
+                parent: data.Category,
                 permissionOverwrites: [
                     { 
-                        id: everyone,
+                        id: data.Everyone,
                         deny: [ViewChannel, SendMessages, ReadMessageHistory],
 
                     },
@@ -36,12 +42,13 @@ module.exports = {
             }).then(async (channel) => {
                 const newTicketSchema = await ticketSchema.create({
                     GuildID: guild.id,
-                    MemberID: member.id,
+                    MembersID: member.id,
                     TicketID: ticketId,
                     ChannelID: channel.id,
                     Closed: false,
                     Locked: false,
                     Type: customId,
+                    Claimed: false,
                 });
 
                 const embed = new EmbedBuilder()
@@ -53,7 +60,8 @@ module.exports = {
                 const button = new ActionRowBuilder().setComponents(
                     new ButtonBuilder().setCustomId('close').setLabel('Close the ticket').setStyle(ButtonStyle.Primary).setEmoji("❌"),
                     new ButtonBuilder().setCustomId('lock').setLabel('Lock the ticket').setStyle(ButtonStyle.Secondary).setEmoji("🔐"),
-                    new ButtonBuilder().setCustomId('unlock').setLabel('Unlock the ticket').setStyle(ButtonStyle.Success).setEmoji("🔓")
+                    new ButtonBuilder().setCustomId('unlock').setLabel('Unlock the ticket').setStyle(ButtonStyle.Success).setEmoji("🔓"),
+                    new ButtonBuilder().setCustomId('claim').setLabel('Claim').setStyle(ButtonStyle.Secondary).setEmoji("🛄")
                 );
 
                 channel.send({
