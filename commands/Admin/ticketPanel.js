@@ -41,22 +41,22 @@ module.exports = {
         )
         .addStringOption(option => 
             option.setName("buttonone")
-            .setDescription("Format: (Name of button, Emoji)")
+            .setDescription("Format: (Name of button,Emoji)")
             .setRequired(true)
         )
         .addStringOption(option => 
             option.setName("buttontwo")
-            .setDescription("Format: (Name of button, Emoji)")
+            .setDescription("Format: (Name of button,Emoji)")
             .setRequired(true)
         )
         .addStringOption(option => 
             option.setName("buttonthree")
-            .setDescription("Format: (Name of button, Emoji)")
+            .setDescription("Format: (Name of button,Emoji)")
             .setRequired(true)
         )
         .addStringOption(option => 
             option.setName("buttonfour")
-            .setDescription("Format: (Name of button, Emoji)")
+            .setDescription("Format: (Name of button,Emoji)")
             .setRequired(true)
         ),
         

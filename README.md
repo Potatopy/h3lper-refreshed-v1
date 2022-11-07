@@ -5,10 +5,12 @@ This is a multi-purpose bot made by zach.#0001 This will teach you on how to set
 
 - Moderation Commands
 - Advanced Ticket System
-- --Fun Commands (COMING SOON!!)-- i'll think about it
-- Economy (COMING SOON!!)
-- --Music (COMING SOON!!)-- this is held off due to the limited documentation on the discord-player website
-- AI Image Generation (COMING SOON!!)
+- Leveling System
+- Economy
+- ~~Music~~ this is held off due to the limited documentation on the discord-player website
+- ~~AI Image Generation~~ - same reason with music commands
+
+I know a lot of features have been cut off but I will try my best to find replacements!
 
 # Licenses / Links
 
