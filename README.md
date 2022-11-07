@@ -1,5 +1,5 @@
 # h3lper-refreshed
-This is a multi-purpose bot made by zach.#0001 This will teach you on how to set it up and run it.
+This is a multi-purpose bot made by zach.#0001 + others.
 
 # Features
 
@@ -16,3 +16,4 @@ I know a lot of features have been cut off but I will try my best to find replac
 
 [MIT](https://choosealicense.com/licenses/mit/)
 [Credits](https://github.com/Potatopy/h3lper-refreshed-v1/blob/master/CREDITS.md)
+[Instructions](https://github.com/Potatopy/h3lper-refreshed-v1/blob/master/INSTRUCTIONS.md)
