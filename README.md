@@ -16,4 +16,4 @@ I know a lot of features have been cut off but I will try my best to find replac
 
 - [MIT](https://choosealicense.com/licenses/mit/)
 - [Credits](https://github.com/Potatopy/h3lper-refreshed-v1/blob/master/CREDITS.md)
-- [Instructions](https://github.com/Potatopy/h3lper-refreshed-v1/blob/master/INSTRUCTIONS.md)
+- [Instructions](https://github.com/Potatopy/h3lper-refreshed-v1/blob/master/INSTRUCTIONS.md) - yes I know its incomplete but there is still more coming!
