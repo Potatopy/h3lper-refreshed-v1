@@ -17,7 +17,8 @@ const {
         moderation: "🛠️",
         general: "⚙️",
         admin: "🛡️",
-        ticket: "🎫"
+        ticket: "🎫",
+        economy: "💰"
       };
 
       const directories = [

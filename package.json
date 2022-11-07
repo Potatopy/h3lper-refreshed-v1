@@ -26,6 +26,7 @@
     "chalk": "^5.1.2",
     "craiyon": "^1.0.0",
     "discord-api-types": "^0.37.16",
+    "discord-economy-super": "^1.6.9",
     "discord-html-transcripts": "^3.1.2",
     "discord-player": "^5.3.2",
     "discord.js": "^14.6.0",

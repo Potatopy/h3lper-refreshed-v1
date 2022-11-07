@@ -6,7 +6,7 @@ This is a multi-purpose bot made by zach.#0001 + others.
 - Moderation Commands
 - Advanced Ticket System
 - Leveling System
-- Economy
+- Economy - NOTE: This is a local database if you want to make it into the mongo database. You have to modify the whole code for that
 - ~~Music~~ this is held off due to the limited documentation on the discord-player website
 - ~~AI Image Generation~~ - same reason with music commands
 
