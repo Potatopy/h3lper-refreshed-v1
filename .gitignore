@@ -3,6 +3,7 @@ node_modules
 
 # Secrets
 secrets.txt
+storage.json
 
 # Node.js things
 package-lock.json
