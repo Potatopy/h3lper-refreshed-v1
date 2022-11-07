@@ -12,6 +12,8 @@ module.exports = {
 
         if (mongoose.connect) {
             console.log('MongoDB Connected!')
+        } else if (mongoose.disconnect) {
+            console.log('Oops! The database disconnected!')
         }
 
 
