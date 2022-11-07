@@ -5,9 +5,9 @@ This is a multi-purpose bot made by zach.#0001 This will teach you on how to set
 
 - Moderation Commands
 - Advanced Ticket System
-- Fun Commands (COMING SOON!!)
+- --Fun Commands (COMING SOON!!)-- i'll think about it
 - Economy (COMING SOON!!)
-- Music (COMING SOON!!)
+- --Music (COMING SOON!!)-- this is held off due to the limited documentation on the discord-player website
 - AI Image Generation (COMING SOON!!)
 
 # Licenses / Links
