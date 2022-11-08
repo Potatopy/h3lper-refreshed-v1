@@ -11,3 +11,6 @@ package-lock.json
 # IDE / Docker Booting in VS Code
 .vscode
 .idea
+
+# Others
+ecoMgmt.js
