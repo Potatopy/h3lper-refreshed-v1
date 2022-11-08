@@ -1,5 +1,5 @@
 const Economy = require('discord-economy-super')
-const { truncate } = require('fs');
+
 const eco = new Economy({
     storagePath: './storage.json',
     updateCountdown: 1000,
