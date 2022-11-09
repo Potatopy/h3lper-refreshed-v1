@@ -6,7 +6,7 @@ This is a multi-purpose bot made by zach.#0001 + others.
 - Moderation Commands
 - Advanced Ticket System
 - Leveling System
-- Economy - NOTE: If you are going to use this DO NOT USE NODEMON!!!
+- Economy - NOTE: In EcoDB.js insert your mongodb login into 'connectionURI' string. ik its in your config.json file but it is not adding to the db for some reason when i const it.
 - ~~Music~~ this is held off due to the limited documentation on the discord-player website
 - ~~AI Image Generation~~ - same reason with music commands
 

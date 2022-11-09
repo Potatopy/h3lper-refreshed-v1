@@ -1,7 +1,11 @@
-const Economy = require('discord-economy-super')
-
+const Economy = require('discord-economy-super/mongodb')
+const token = require('../config.json')
 const eco = new Economy({
-    storagePath: './storage.json',
+    connection: {
+        connectionURI: 'mongo db login',
+        collectionName: 'collection',
+        dbName: 'db',
+    },
     updateCountdown: 1000,
     checkStorage: true,
     deprecationWarnings: true,
@@ -30,8 +34,8 @@ const eco = new Economy({
         showProblems: true,
         sendLog: true,
         sendSuccessLog: true,
-    }
-})
+    },
+});
 
 eco.on('ready', () => {
     console.log('Economy system is ready!')
