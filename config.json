@@ -1,4 +1,4 @@
 {
-    "token": "MTAzNjEzMTA4MTQ0MDczMTIxNg.G2rQt_.uositC7pQhqvKHNOFBINtHTbeIwXNK9YKmiskM",
-    "mongodb": "mongodb+srv://data:degen@cluster0.yvkxmkl.mongodb.net/?retryWrites=true&w=majority"
+    "token": "discord bot token",
+    "mongodb": "mongodb login"
 }
