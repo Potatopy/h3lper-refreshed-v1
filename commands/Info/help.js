@@ -18,7 +18,8 @@ const {
         general: "⚙️",
         admin: "🛡️",
         ticket: "🎫",
-        economy: "💰"
+        economy: "💰",
+        level: "⬆️"
       };
 
       const directories = [

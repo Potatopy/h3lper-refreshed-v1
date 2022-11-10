@@ -2,7 +2,7 @@ const Economy = require('discord-economy-super/mongodb')
 const token = require('../config.json')
 const eco = new Economy({
     connection: {
-        connectionURI: 'mongo db login',
+        connectionURI: token.mongodb,
         collectionName: 'collection',
         dbName: 'db',
     },

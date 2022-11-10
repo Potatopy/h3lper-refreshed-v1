@@ -5,10 +5,11 @@ This is a multi-purpose bot made by zach.#0001 + others.
 
 - Moderation Commands
 - Advanced Ticket System
-- Leveling System
-- Economy - NOTE: In EcoDB.js insert your mongodb login into 'connectionURI' string. ik its in your config.json file but it is not adding to the db for some reason when i const it.
+- Leveling System - WIP
+- Status updater - NOTE: If you are going to use this globaly. Remove the command cause it shows everywhere.
+- Economy - NOTE: broken atm until i get smarter
 - ~~Music~~ this is held off due to the limited documentation on the discord-player website
-- ~~AI Image Generation~~ - same reason with music commands
+- ~~AI Image Generation~~ - same reason with music commands (except with craiyon)
 
 I know a lot of features have been cut off but I will try my best to find replacements!
 
