@@ -21,6 +21,7 @@ client.player = new Player(client, {
         highWaterMark: 1 << 25
     }
 });
+client.commands = new Collection()
 client.config = require('./config.json')
 
 client.login(client.config.token).then(() => {
