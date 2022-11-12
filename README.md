@@ -1,11 +1,12 @@
 # h3lper-refreshed
 This is a multi-purpose bot made by zach.#0001 + others.
+turns out the command handler is broken lmao
 
 # Features
 
 - Moderation Commands
 - Advanced Ticket System
-- Leveling System - WIP
+- Leveling System - WIP im just lazy lmao
 - Status updater - NOTE: If you are going to use this globaly. Remove the command cause it shows everywhere.
 - Economy - NOTE: broken atm until i get smarter
 - ~~Music~~ this is held off due to the limited documentation on the discord-player website
