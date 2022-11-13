@@ -1,5 +1,4 @@
-const { QueryType } = require('discord.js')
-const player = require('../../events/client/player.js')
+const { QueryType } = require('discord-player')
 const {
     SlashCommandBuilder
 } = require('discord.js')
@@ -19,12 +18,12 @@ module.exports = {
 
             if (!interaction.member.voice.channel) return interaction.reply({ content: 'You need to be in a vc to run this command' })
 
-            const searchResult = await player.search(songTitle, {
+            const searchResult = await client.player.search(songTitle, {
                 requestedBy: interaction.user,
                 searchEngine: QueryType.AUTO,
             });
 
-            const queue = await player.createQueue(interaction.guild, {
+            const queue = await client.player.createQueue(interaction.guild, {
                 metadata: interaction.channel
             })
 

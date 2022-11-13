@@ -36,7 +36,7 @@
     "ffmpeg-static": "^5.1.0",
     "genius-api": "^0.3.0",
     "glob": "^8.0.3",
-    "mongoose": "^6.7.0",
+    "mongoose": "^6.7.2",
     "ms": "^2.1.3"
   }
 }

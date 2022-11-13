@@ -1,4 +1,3 @@
-const player = require('../../events/client/player.js')
 const {
     SlashCommandBuilder
 } = require('discord.js')
@@ -7,7 +6,7 @@ module.exports = {
         .setName('pause')
         .setDescription('Pause the current track!'),
     async execute(client, interaction) {
-        const queue = player.getQueue(interaction.guildId);
+        const queue = client.player.getQueue(interaction.guildId);
 
         if (!queue) return interaction.reply('There is nothing playing')
 

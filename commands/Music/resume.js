@@ -1,4 +1,3 @@
-const player = require('../../events/client/player.js')
 const {
     SlashCommandBuilder
 } = require('discord.js')
@@ -9,7 +8,7 @@ module.exports = {
         .setDescription('Resume the current track!'),
 
     async execute(interaction, client) {
-        const queue = player.getQueue(interaction.guildId);
+        const queue = client.player.getQueue(interaction.guildId);
 
         if (!queue) return interaction.reply('There is nothing playing')
 

@@ -1,4 +1,3 @@
-const player = require('../../events/client/player.js')
 const {
     SlashCommandBuilder,
     EmbedBuilder

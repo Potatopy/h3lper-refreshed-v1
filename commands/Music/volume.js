@@ -1,4 +1,3 @@
-const player = require('../../events/client/player.js')
 const {
     SlashCommandBuilder
 } = require('discord.js')
@@ -15,7 +14,7 @@ module.exports = {
         ),
         async execute(interaction, client) {
             const volumePercentage = interaction.options.getInteger('percentage')
-            const queue = player.getQueue(interaction.guildId)
+            const queue = client.player.getQueue(interaction.guildId)
             if (!queue?.playing) return interaction.reply({ content: 'There is nothing in the queue' })
 
             if (!volumePercentage) return interaction.reply({ content: `Current volume is \`${queue.volume}%\`` })

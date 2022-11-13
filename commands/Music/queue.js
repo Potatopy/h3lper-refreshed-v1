@@ -1,4 +1,3 @@
-const player = require('../../events/client/player.js')
 const {
     SlashCommandBuilder,
     EmbedBuilder
@@ -10,7 +9,7 @@ module.exports = {
         .setDescription('View the current queue'),
 
     async execute(client, interaction) {
-        const queue = player.getQueue(interaction.guildId)
+        const queue = client.player.getQueue(interaction.guildId)
         const embed = new EmbedBuilder()
 
         if (!queue?.playing)

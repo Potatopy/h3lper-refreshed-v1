@@ -1,4 +1,3 @@
-const player = require('../../events/client/player.js')
 const {
     SlashCommandBuilder
 } = require('discord.js')
@@ -8,7 +7,7 @@ module.exports = {
         .setName('skip')
         .setDescription('Skips the current track'),
     async execute (client, interaction, args) {
-        const queue = player.getQueue(interaction.guildId);
+        const queue = client.player.getQueue(interaction.guildId);
         if (!queue?.playing)
             return interaction.reply({
                 content: `There is no music in the queue`
