@@ -15,13 +15,6 @@ const client = new Client({
     partials: [User, Message, GuildMember, ThreadMember]
 });
 
-client.player = new Player(client, {
-    ytdlOptions: {
-        quality: "highestaudio",
-        highWaterMark: 1 << 25
-    },
-})
-
 client.commands = new Collection()
 client.config = require('./config.json')
 
