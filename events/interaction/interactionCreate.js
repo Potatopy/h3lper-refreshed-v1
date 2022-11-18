@@ -16,7 +16,7 @@ module.exports = {
       const { customId } = interaction;
 
       if (customId == "verify") {
-        const role = interaction.guild.roles.cache.get("909807134923956252"); // Change to your verified role ID
+        const role = interaction.guild.roles.cache.get("1043291552233050122"); // Change to your verified role ID
         return interaction.member.roles.add(role).then((member) =>
           interaction.reply({
             content: `${role} has been assigned to you.`,

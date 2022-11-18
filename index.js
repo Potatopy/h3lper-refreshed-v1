@@ -1,19 +1,20 @@
 // Credits: Kaj on Youtube (he is an underrated mf) + zach.#0001
 
 const { Client, GatewayIntentBits, Partials, GuildScheduledEvent, Guild, Collection } = require('discord.js')
-const config = require('./config.json')
-const { Player } = require('discord-player')
+const logs = require('discord-logs')
 
-const { Guilds, GuildMembers, GuildMessages, GuildVoiceStates } = GatewayIntentBits
-const { User, Message, GuildMember, ThreadMember, Channel } = Partials
-
+const {handleLogs} = require('./handlers/handleLogs')
 const {loadEvents} = require('./handlers/eventHandler')
 const {loadCommands} = require('./handlers/commandHandler')
 
 const client = new Client({
-    intents: [Guilds, GuildMembers, GuildMessages, GuildVoiceStates],
-    partials: [User, Message, GuildMember, ThreadMember]
+    intents: [Object.keys(GatewayIntentBits)],
+    partials: [Object.keys(Partials)]
 });
+
+logs(client, {
+    debug: true
+})
 
 client.commands = new Collection()
 client.config = require('./config.json')
@@ -21,4 +22,5 @@ client.config = require('./config.json')
 client.login(client.config.token).then(() => {
     loadEvents(client);
     loadCommands(client);
+    handleLogs(client);
 })
