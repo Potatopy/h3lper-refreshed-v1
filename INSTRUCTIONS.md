@@ -2,7 +2,6 @@
 - Node v18 or up
 - Mongodb login
 - Discord Token
-- Genius API Key
 
 # Instructions
 
