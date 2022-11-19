@@ -1,3 +1,5 @@
+// Credits: Kaj on Youtube
+
 const { EmbedBuilder } = require("discord.js");
 
 function handleLogs(client) {
