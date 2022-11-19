@@ -19,7 +19,8 @@ const {
         admin: "🛡️",
         ticket: "🎫",
         economy: "💰",
-        level: "⬆️"
+        level: "⬆️",
+        music: "🎵"
       };
 
       const directories = [
