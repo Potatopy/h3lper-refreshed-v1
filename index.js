@@ -8,6 +8,7 @@ const {loadEvents} = require('./handlers/eventHandler')
 const {loadCommands} = require('./handlers/commandHandler')
 
 const client = new Client({
+    shards: "auto",
     intents: [Object.keys(GatewayIntentBits)],
     partials: [Object.keys(Partials)]
 });
