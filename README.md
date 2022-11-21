@@ -6,7 +6,7 @@ turns out the command handler is broken lmao
 
 - Moderation Commands
 - Advanced Ticket System
-- Leveling System - WIP im just lazy lmao
+- Leveling System - canvacord coming soon!
 - Economy
 - ~~Music~~ - There are plans of me bringing this back ;)
 - ~~AI Image Generation~~ - same reason with music commands (except with craiyon)

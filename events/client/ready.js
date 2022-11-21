@@ -1,6 +1,7 @@
 const { Client } = require('discord.js');
 const { default: mongoose } = require('mongoose');
 const config = require("../../config.json")
+const Levels = require('discord.js-leveling');
 
 module.exports = {
     name: "ready",
@@ -16,6 +17,7 @@ module.exports = {
             console.log('Oops! The database disconnected!')
         }
 
+        Levels.setURL(config.mongodb);
 
         client.once('ready', () => {
             console.log(`Logged in as ${client.user.tag}`)
