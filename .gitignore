@@ -5,12 +5,12 @@ node_modules
 secrets.txt
 storage.json
 
-# Node.js things
+# Node.js files
 package-lock.json
 
 # IDE / Docker Booting in VS Code
 .vscode
 .idea
 
-# Others
-ecoMgmt.js
+# Testing Commands
+./commands/Music
