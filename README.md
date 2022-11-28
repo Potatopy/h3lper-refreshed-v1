@@ -1,6 +1,5 @@
 # h3lper-refreshed
 This is a multi-purpose bot made by zach.#0001 + others.
-turns out the command handler is broken lmao
 
 # Features
 
