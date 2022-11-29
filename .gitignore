@@ -1,14 +1,12 @@
 # Dependancies
 node_modules
+package-lock.json
 
 # Secrets
 secrets.txt
 storage.json
 
-# Node.js files
-package-lock.json
-
-# IDE / Docker Booting in VS Code
+# IDE / Debugging files
 .vscode
 .idea
 
