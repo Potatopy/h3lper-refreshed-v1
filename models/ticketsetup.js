@@ -12,5 +12,3 @@ let ticketSetup = new Schema({
 })
 
 module.exports = model("TicketSetup", ticketSetup)
-
-// empty commit
