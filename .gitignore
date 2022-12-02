@@ -2,7 +2,7 @@
 node_modules
 package-lock.json
 
-# Secrets
+# Secrets 
 secrets.txt
 storage.json
 
@@ -12,3 +12,4 @@ storage.json
 
 # Testing Commands
 ./commands/Music
+cmd_template.js
