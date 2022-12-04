@@ -1,6 +1,7 @@
 // Credits: Kaj on Youtube!
 
 const { CommandInteraction } = require("discord.js");
+const verifiedID = require('../../config.json').verifiedID;
 
 module.exports = {
   name: "interactionCreate",
@@ -16,7 +17,7 @@ module.exports = {
       const { customId } = interaction;
 
       if (customId == "verify") {
-        const role = interaction.guild.roles.cache.get("1043291552233050122"); // Change to your verified role ID
+        const role = interaction.guild.roles.cache.get(verifiedID);
         return interaction.member.roles.add(role).then((member) =>
           interaction.reply({
             content: `${role} has been assigned to you.`,

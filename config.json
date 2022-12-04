@@ -1,4 +1,5 @@
 {
     "token": "discord bot token",
-    "mongodb": "mongodb login"
+    "mongodb": "mongodb login",
+    "verifiedID": "insert verified role id here"
 }

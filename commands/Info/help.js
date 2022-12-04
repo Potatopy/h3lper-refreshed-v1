@@ -20,7 +20,8 @@ const {
         ticket: "🎫",
         economy: "💰",
         level: "⬆️",
-        music: "🎵"
+        music: "🎵",
+        nsfw: "🔞",
       };
 
       const directories = [

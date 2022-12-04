@@ -1,14 +1,14 @@
 # h3lper-refreshed
-This is a multi-purpose bot made by load#0002 + others.
+This is a multi-purpose bot made by domain#0001 + others.
 
 # Features
 
 - Moderation Commands
 - Advanced Ticket System
 - Leveling System - canvacord coming soon!
-- Economy
+- Economy - This will be updated with a shop.
 - ~~Music~~ - There are plans of me bringing this back ;)
-- ~~AI Image Generation~~ - same reason with music commands (except with craiyon)
+- ~~AI Image Generation~~ - Barely any docs on how to use jsons and requests (except with craiyon)
 
 I know a lot of features have been cut off but I will try my best to find replacements!
 
