@@ -23,7 +23,7 @@ client.config = require('./config.json')
 const { DisTube } = require('distube')
 const { SpotifyPlugin } = require('@distube/spotify')
 
-client.distube = new DisTube(client, { // This is coming soon!
+client.distube = new DisTube(client, {
     emitNewSongOnly: true,
     leaveOnFinish: true,
     nsfw: true,
@@ -31,8 +31,6 @@ client.distube = new DisTube(client, { // This is coming soon!
     emptyCooldown: 300,
     plugins: [new SpotifyPlugin()]
 });
-
-module.exports = client;
 
 client.login(client.config.token).then(() => {
     loadEvents(client);
