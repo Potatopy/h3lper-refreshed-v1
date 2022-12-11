@@ -31,6 +31,7 @@ client.distube = new DisTube(client, {
     emptyCooldown: 300,
     plugins: [new SpotifyPlugin()]
 });
+module.exports = client;
 
 client.login(client.config.token).then(() => {
     loadEvents(client);

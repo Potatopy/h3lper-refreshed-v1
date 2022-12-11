@@ -42,14 +42,20 @@ module.exports = {
             subcommand
                 .setName('options')
                 .setDescription('Settings for the current track!')
-                .setRequired(true)
-                .addChoices(
-                    {name: "queue", value: "queue"},
-                    {name: "skip", value: "skip"},
-                    {name: "pause", value: "pause"},
-                    {name: "resume", value: "resume"},
-                    {name: "stop", value: "stop"}
+                .addStringOption(option =>
+                    option
+                        .setName('option')
+                        .setDescription('The option you want to use!')
+                        .addChoices(
+                            {name: "queue", value: "queue"},
+                            {name: "skip", value: "skip"},
+                            {name: "pause", value: "pause"},
+                            {name: "resume", value: "resume"},
+                            {name: "stop", value: "stop"}
+                        )
+                
                 )
+                
         ),
         async execute(interaction) {
             const embed = new EmbedBuilder();
@@ -66,7 +72,7 @@ module.exports = {
                 return interaction.reply({embeds: [embed], ephemeral: true});
             }
 
-            if (!member.voice.channelId == guild.me.voice.channelId) {
+            if (!member.voice.channelId == guild.members.me.voice.channelId) {
                 embed.setColor("Red").setDescription(`I'm already playing music in <#${guild.members.me.voice.channelId}>`);
                 return interaction.reply({embeds: [embed], ephemeral: true});
             }
@@ -77,8 +83,8 @@ module.exports = {
                         client.distube.play(voiceChannel, query, { textChannel: channel, member: member })
                         return interaction.reply({ content: "🎶 Request Recieved!" });
                     case "volume":
-                        client.distube.play(voiceChannel, volume)
-                        return interaction.reply({ content: `🔉 Volume set to ${volume}%` });
+                        client.distube.play(voiceChannel, percent)
+                        return interaction.reply({ content: `🔉 Volume set to ${percent}%` });
                     case "options":
                         const queue = await client.distube.getQueue(voiceChannel);
 
