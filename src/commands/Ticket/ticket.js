@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder } = require('discord.js')
-const ticketSchema = require('../../models/ticket')
+const ticketSchema = require('../../../models/ticket')
 
 module.exports = {
     data: new SlashCommandBuilder()
