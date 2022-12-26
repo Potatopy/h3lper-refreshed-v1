@@ -1,4 +1,4 @@
-const client = require("../../index.js");
+const client = require("../../../index.js");
 const { EmbedBuilder } = require("discord.js");
 
 const status = queue =>

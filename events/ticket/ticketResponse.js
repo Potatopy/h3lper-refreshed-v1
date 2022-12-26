@@ -1,6 +1,6 @@
 const { ChannelType, ButtonInteraction, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits } = require('discord.js')
-const ticketSchema = require('../../models/ticket')
-const TicketSetup = require('../../models/ticketsetup')
+const ticketSchema = require('../../../models/ticket')
+const TicketSetup = require('../../../models/ticketsetup')
 
 module.exports = {
     name: "interactionCreate",
