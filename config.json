@@ -1,5 +1,5 @@
 {
-    "token": "MTA0MjYyNDg3NzMxNzg1NzI4Mg.GIhzoM.LzNA_3UGxBIYORpFByYfG_AZTUEBjpCHggEJmA",
-    "mongodb": "mongodb+srv://data:drained@cluster0.yvkxmkl.mongodb.net/?retryWrites=true&w=majority",
-    "verifiedID": "1043291552233050122"
+    "token": "discord bot token",
+    "mongodb": "mongodb login",
+    "verifiedID": "insert verified role id here"
 }
