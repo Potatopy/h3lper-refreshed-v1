@@ -3,9 +3,9 @@
 const { Client, GatewayIntentBits, Partials, GuildScheduledEvent, Guild, Collection } = require('discord.js')
 const logs = require('discord-logs')
 
-const {handleLogs} = require('../handlers/handleLogs')
-const {loadEvents} = require('../handlers/eventHandler')
-const {loadCommands} = require('../handlers/commandHandler')
+const {handleLogs} = require('./handlers/handleLogs')
+const {loadEvents} = require('./handlers/eventHandler')
+const {loadCommands} = require('./handlers/commandHandler')
 
 const client = new Client({
     shards: "auto",
