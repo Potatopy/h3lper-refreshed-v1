@@ -62,7 +62,7 @@ module.exports = {
                                     client.user.setActivity(activity, { type: ActivityType.Playing })
                                     break;
                                 case "Streaming":
-                                    client.user.setActivity(activity, { type: ActivityType.Streaming })
+                                    client.user.setActivity(activity, { type: ActivityType.Streaming, url: "https://solo.to/wtr" })
                                     break;
                                 case "Listening":
                                     client.user.setActivity(activity, { type: ActivityType.Listening })

@@ -83,7 +83,7 @@ module.exports = {
                         client.distube.play(voiceChannel, query, { textChannel: channel, member: member })
                         return interaction.reply({ content: "🎶 Request Recieved!" });
                     case "volume":
-                        client.distube.play(voiceChannel, percent)
+                        client.distube.setVolume(voiceChannel, percent)
                         return interaction.reply({ content: `🔉 Volume set to ${percent}%` });
                     case "options":
                         const queue = await client.distube.getQueue(voiceChannel);

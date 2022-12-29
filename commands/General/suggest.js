@@ -20,7 +20,7 @@ module.exports = {
         .addChoices(
           { name: "Bot Recommendation", value: "Bot" },
           { name: "Discord Server", value: "Server" },
-          { name: "What to sell?", value: "Sell" },
+          { name: "What to code?", value: "Sell" },
           { name: "Other", value: "Other" }
         )
     )
@@ -35,7 +35,7 @@ module.exports = {
         const {options, guildId, member, user, guild} = interaction;
         const type = options.getString("type");
         const description = options.getString("description");
-        const channel = guild.channels.cache.get("1045325594440773723"); // Insert your own channel ID here
+        const channel = guild.channels.cache.get("1057802595881730098"); // Insert your own channel ID here
         
         const embed = new EmbedBuilder()
         .setColor("Green")
