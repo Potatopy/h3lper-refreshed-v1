@@ -13,11 +13,11 @@ This is a multi-purpose bot made by domain#0001 + others.
 
 All of these Premium Features are available for free!
 
-## Licenses / Links
+## License / Links
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-[Credits](https://github.com/Potatopy/h3lper-refreshed-v1/blob/master/CREDITS.md)
+[Contributing to this Project!](./.github/CONTRIBUTING.md)
 
 [Instructions](./.github/INSTRUCTIONS.md) - Yes I know its incomplete but there is still more coming!
 
