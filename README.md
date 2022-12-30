@@ -7,10 +7,11 @@ This is a multi-purpose bot made by domain#0001 + others.
 - [x] Moderation Commands
 - [x] Advanced Ticket System
 - [x] Leveling System
-- [x] Economy - This will be updated with a shop.
+- [ ] Economy - Coming Soon!
 - [x] Music Commands
+- And Many More To Come!!
 
-I know a lot of features have been cut off but I will try my best to find replacements!
+All of these Premium Features are available for free!
 
 ## Licenses / Links
 
@@ -19,3 +20,5 @@ I know a lot of features have been cut off but I will try my best to find replac
 [Credits](https://github.com/Potatopy/h3lper-refreshed-v1/blob/master/CREDITS.md)
 
 [Instructions](https://github.com/Potatopy/h3lper-refreshed-v1/blob/master/INSTRUCTIONS.md) - Yes I know its incomplete but there is still more coming!
+
+[Support Server](https://discord.gg/9j8qcsVFQX)

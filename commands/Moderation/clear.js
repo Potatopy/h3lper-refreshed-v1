@@ -8,6 +8,7 @@ module.exports = {
     .addIntegerOption(option => 
         option.setName('amount')
         .setDescription('Amount of messages to be purged! LIMIT = 99')
+        .setMaxValue(99)
         .setRequired(true)
         )
     .addUserOption(option =>

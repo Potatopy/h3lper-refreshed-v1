@@ -47,7 +47,7 @@ function handleLogs(client) {
         const embed = new EmbedBuilder()
             .setTitle('Permission Updated!')
             .setColor('Green')
-            .setDescription(channel.name + 's permissions updated!');
+            .setDescription(channel.name + '\'s permissions updated!');
 
         return send_log(channel.guild.id, embed);
 
