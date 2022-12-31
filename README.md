@@ -1,6 +1,6 @@
 # h3lper-refreshed
 
-This is a multi-purpose bot made by domain#0001 + others.
+This is a multi-purpose bot made by degenerate#7958 + others.
 
 ## Features
 
@@ -12,6 +12,8 @@ This is a multi-purpose bot made by domain#0001 + others.
 - And Many More To Come!!
 
 All of these Premium Features are available for free!
+
+If there are any errors Please contact me on Discord: degenerate#7958
 
 ## License / Links
 
