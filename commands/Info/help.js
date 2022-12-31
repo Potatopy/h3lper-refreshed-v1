@@ -22,6 +22,7 @@ const {
         level: "⬆️",
         music: "🎵",
         nsfw: "🔞",
+        giveaway: "🎉",
       };
 
       const directories = [

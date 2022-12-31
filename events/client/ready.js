@@ -1,6 +1,6 @@
 const { Client } = require('discord.js');
 const { default: mongoose } = require('mongoose');
-const config = require("../../config.json")
+const config = require("../../configs/config.json")
 const Levels = require('discord.js-leveling');
 const chalk = require('chalk');
 

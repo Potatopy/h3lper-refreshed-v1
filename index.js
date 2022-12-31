@@ -2,6 +2,7 @@
 
 const { Client, GatewayIntentBits, Partials, GuildScheduledEvent, Guild, Collection } = require('discord.js')
 const logs = require('discord-logs')
+const {forEach} = require('fs')
 
 const {handleLogs} = require('./handlers/handleLogs')
 const {loadEvents} = require('./handlers/eventHandler')
@@ -18,7 +19,7 @@ logs(client, {
 })
 
 client.commands = new Collection()
-client.config = require('./config.json')
+client.config = require('./configs/config.json')
 
 const { DisTube } = require('distube')
 const { SpotifyPlugin } = require('@distube/spotify')
@@ -31,6 +32,14 @@ client.distube = new DisTube(client, {
     emptyCooldown: 300,
     plugins: [new SpotifyPlugin()]
 });
+
+client.giveawaysConfig = require('./configs/config.js')
+
+const handlers = ['giveawaysEventsHandler', 'giveawaysManager']
+handlers.forEach((x) => {
+    require(`./utils/${x}`)(client);
+})
+
 module.exports = client;
 
 client.login(client.config.token).then(() => {
