@@ -1,6 +1,6 @@
 {
-  "name": "discord-bot",
-  "version": "1.0.0",
+  "name": "h3lper-refreshed",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "chalk": "^4.1.2",
     "craiyon": "^1.0.0",
     "discord-api-types": "^0.37.16",
+    "discord-backup": "^3.2.1",
     "discord-economy-super": "^1.6.9",
     "discord-giveaways": "^6.0.1",
     "discord-html-transcripts": "^3.1.2",

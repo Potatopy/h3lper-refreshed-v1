@@ -8,6 +8,7 @@ This is a multi-purpose bot made by degenerate#7958 + others.
 - [x] Advanced Ticket System
 - [x] Leveling System
 - [ ] Economy - Coming Soon!
+- [x] Giveaway system
 - [x] Music Commands
 - And Many More To Come!!
 

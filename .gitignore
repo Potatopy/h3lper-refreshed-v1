@@ -4,12 +4,7 @@ package-lock.json
 
 # Secrets 
 secrets.txt
-storage.json
 
 # IDE / Debugging files
 .vscode
 .idea
-
-# Testing Commands
-./commands/Music
-cmd_template.js
