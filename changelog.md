@@ -42,3 +42,8 @@ All Changes In this project will be documented here.
 ### Additions in Update 1.0.3
 
 - Added an economy system [credits](https://www.youtube.com/@ctk_warrior)
+- Added A new pkg (pretty-ms)
+
+### Bug fixes + General Updates in v1.0.3
+
+N/A
