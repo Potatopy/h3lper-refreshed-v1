@@ -29,7 +29,7 @@ module.exports = {
         Levels.setURL(config.mongodb);
 
         client.once('ready', () => {
-            console.log(`Logged in as ${client.user.tag}`)
+            console.log(chalk.green(`Logged in as ${client.user.tag}`))
         })
     }
 }

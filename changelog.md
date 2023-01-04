@@ -36,3 +36,9 @@ All Changes In this project will be documented here.
 ### Bug fixes + General Updates in v1.0.2
 
 - Fixed Giveaway System reading credits.txt
+
+## [v1.0.3] - 01/03/2023
+
+### Additions in Update 1.0.3
+
+- Added an economy system [credits](https://www.youtube.com/@ctk_warrior)
