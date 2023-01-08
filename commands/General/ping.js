@@ -5,6 +5,6 @@ module.exports = {
     .setName('ping')
     .setDescription('Returns "Pong!"'),
     execute(interaction) {
-        interaction.reply({content: "Pong!", ephemeral: true}) // only visible to you
+        interaction.reply({content: `Pong! 🏓: ${client.ws.ping}`, ephemeral: true}) // only visible to you
     }
 }
