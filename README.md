@@ -9,7 +9,7 @@ This is a multi-purpose bot made by degenerate#7958 + others.
 - [x] Leveling System
 - [x] Economy
 - [x] Giveaway system
-- [x] Music Commands - Check other ba=ranch
+- [x] Music Commands - Check other branch
 - And Many More To Come!!
 
 All of these Premium Features are available for free!
